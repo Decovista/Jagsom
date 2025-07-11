@@ -11,12 +11,10 @@ function ContactSection() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     if (name === "phone") {
-      // Allow only numbers
       const numericValue = value.replace(/\D/g, "");
       setFormData((prev) => ({ ...prev, phone: numericValue }));
     } else {
@@ -57,8 +55,8 @@ function ContactSection() {
   };
 
   return (
-    <div className="ContactSection bg-blue-100 py-10">
-      <div className="ContactSection-wrapper max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 px-4">
+    <div className="ContactSection bg-blue-100 py-10 min-h-fit">
+      <div className="ContactSection-wrapper max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 px-4 lg:px-8">
         <form
           className="c-popup bg-white shadow-md rounded p-6 w-full lg:w-1/2"
           onSubmit={handleSubmit}
@@ -84,7 +82,6 @@ function ContactSection() {
               pattern="[0-9]{10}"
               required
             />
-
             <input
               type="email"
               name="email"
@@ -94,7 +91,6 @@ function ContactSection() {
               className="border border-[#173c73] rounded px-4 py-2 text-blue-800"
               required
             />
-
             <button
               type="submit"
               className={`bg-[#173c73] hover:bg-cyan-700 text-white font-semibold py-2 rounded ${
@@ -107,10 +103,8 @@ function ContactSection() {
 
             {status && (
               <p
-                className={`text-sm mt-2 ${
-                  status.includes("successfully")
-                    ? "text-green-600"
-                    : "text-red-600"
+                className={`text-sm mt-1 ${
+                  status.includes("successfully") ? "text-green-600" : "text-red-600"
                 }`}
               >
                 {status}
@@ -119,13 +113,13 @@ function ContactSection() {
           </div>
         </form>
 
-        <div className="map-container w-full lg:w-1/2">
+        <div className="map-container w-full lg:w-1/2 overflow-hidden rounded-lg shadow-md">
           <iframe
             title="Gurgaon Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7755551779515!2d77.03394127531891!3d28.42295457577496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d187579660c63%3A0x674a84fc35ac4661!2sVIPUL%20BUSINESS%20PARK%2C%20Central%20Park%20II%2C%20Sector%2048%2C%20Gurugram%2C%20Haryana%20122022!5e0!3m2!1sen!2sin!4v1720500381779!5m2!1sen!2sin"
             width="100%"
             height="350"
-            style={{ border: 0, borderRadius: "8px" }}
+            style={{ border: 0, borderRadius: "8px", width: "100%", height: "100%" }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

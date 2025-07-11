@@ -15,9 +15,9 @@ function Home() {
       <HeroSection />
       <Aboutsection />
       <WhoWeAre />
-      <hr className="w-[90%] h-[1px]  my-[3px] text-white" />
+      <hr className="w-[90%] h-[1px]  my-[6px] text-white" />
       <MiddleBanner />
-      <hr className="w-[90%] h-[1px]  my-[3px] text-white" />
+      <hr className="w-[90%] h-[1px]  my-[6px] text-white" />
       <Top10 />
       <FAQ />
       <ContactSection />
