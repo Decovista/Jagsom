@@ -40,7 +40,7 @@ function Navigation() {
 
         <div className="navigation-wrapper-left">
           <ul className="navigation-wrapper">
-            <li className="nav-item">
+            <li className="nav-item" onClick={() => setToggleSubNav(false)}>
               <Link to="/"><i className="fa-solid fa-house"></i></Link>
             </li>
 
