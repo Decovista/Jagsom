@@ -1,0 +1,20 @@
+.Top10-section h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #003f63;
+    font-size: 32px;
+    font-weight: 800;
+}
+.top-10-wrapper {
+    padding: 20px 0;
+}
+.bar-underline{
+    width: 10%;
+    height: 2px;
+    background:#003f63 ;
+    margin: 0 auto;
+    transition: 0.5s ease-in;
+}
+.Top10-section:hover .bar-underline{
+    width: 3%;
+}

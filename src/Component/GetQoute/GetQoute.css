@@ -1,0 +1,11 @@
+button.Consult-now {
+  border: 2px solid #272770;
+  padding: 4px 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  color: #272770;
+}
+.GetQoute-wrapper {
+  width: 100%;
+  display: flex;
+}

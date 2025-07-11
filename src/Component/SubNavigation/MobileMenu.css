@@ -1,0 +1,37 @@
+.MobileMenu .navigation-wrapper-left {
+  display: flex;
+  flex-direction: column;
+}
+.MobileMenu .Navigation{
+  position: relative;
+  padding: 0 25px;
+}
+ul.submenu li {
+    color: var(--primari-color) !important;
+}
+.MobileMenu {
+    padding: 0 10px;
+    position: fixed;
+    z-index: 9999999999;
+    background: #1f447b;
+}
+.MobileMenu {
+    padding: 0 10px;
+}
+.MobileMenu .main-logo-container,
+.MobileMenu .hamburgure-menu {
+  display: none;
+}
+.MobileMenu .navigation-container {
+ display: block;
+  padding: 20px 0;
+}
+.MobileMenu .navigation-wrapper-left{ gap: 10px;}
+.MobileMenu .navigation-wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+.navigation-wrapper li:hover{
+
+}
