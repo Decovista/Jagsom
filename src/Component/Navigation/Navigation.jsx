@@ -52,7 +52,7 @@ function Navigation() {
                     {navList.SubTitle.map((subItem, subIndex) => {
                       const slug = generateSlug(subItem.label);
                       return (
-                        <li key={subIndex} className="submenu-item">
+                        <li key={subIndex} className="submenu-item" onClick={() => setToggleSubNav(false)}>
                           <Link to={`/explore/${slug}`}>{subItem.label}</Link>
                         </li>
                       );

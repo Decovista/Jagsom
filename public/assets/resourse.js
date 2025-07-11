@@ -17,8 +17,10 @@ import herobackground from './hero-background.jpg'
 import jagsomteam from './jagsomteam.png'
 import menprofile from './menprofile.png'
 import womenProfile from './womenProfile.png'
+import middlebanner from './middlebanner.jpg'
 
 export default {
+    middlebanner,
     jagsomteam,
     menprofile,
     womenProfile,
