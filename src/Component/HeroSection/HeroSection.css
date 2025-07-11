@@ -41,12 +41,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   color: #fff;
-  z-index: 2;
+  z-index: 99999;
   text-align: center;
-  pointer-events: none;
+  margin: 0 auto;
 }
 
 .header-vid-text h1 {
