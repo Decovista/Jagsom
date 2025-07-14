@@ -1,12 +1,22 @@
-import React from 'react'
-import resourse from '../../../public/assets/resourse'
+import React from 'react';
+import resourse from '../../../public/assets/resourse';
 
 function MiddleBanner() {
   return (
-    <div className='MiddleBanner h-[320px]'>
-      <img className='h-[320px] w-full object-fill' src={resourse.middlebanner} alt="promo-banner" />
+    <div className="MiddleBanner h-auto w-full">
+      <picture>
+        <source
+          srcSet={resourse.middleMobileBanner}
+          media="(max-width: 768px)"
+        />
+        <img
+          src={resourse.middlebanner}
+          alt="promo-banner"
+          className="h-auto w-full object-fill"
+        />
+      </picture>
     </div>
-  )
+  );
 }
 
-export default MiddleBanner
+export default MiddleBanner;

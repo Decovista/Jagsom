@@ -18,8 +18,10 @@ import jagsomteam from './jagsomteam.png'
 import menprofile from './menprofile.png'
 import womenProfile from './womenProfile.png'
 import middlebanner from './middlebanner.jpg'
+import middleMobileBanner from './middle-mobile-banner.jpeg'
 
 export default {
+    middleMobileBanner,
     middlebanner,
     jagsomteam,
     menprofile,

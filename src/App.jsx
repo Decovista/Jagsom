@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, {useState , useEffect} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MyProvider, useMyContext } from "./Context/MyContext.jsx";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -14,9 +14,19 @@ import ExplorePage from "./Pages/ExplorePage/ExplorePage.jsx";
 import GetQoutePopup from "./Component/GetQoutePopup/GetQoutePopup.jsx";
 import InfoPage from "./Pages/InfoPage/InfoPage.jsx";
 import AboutPage from "./Pages/AboutPage/AboutPage.jsx";
+import Loader from './Component/Loader/Loader.jsx'
 
 function AppWrapper() {
   const { toggleSubNav,setShowPopup,showPopup } = useMyContext();
+   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -25,6 +35,7 @@ function AppWrapper() {
     }
       <Navigation />
       {toggleSubNav && <MobileMenu />}
+       {loading ? <Loader /> : ''}
       <Routes>
         <Route path="/" element={<Home />} />
          <Route path="/explore/:slug" element={<ExplorePage />} />
